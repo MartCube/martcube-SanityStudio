@@ -4,6 +4,6 @@ export const structure = (S: StructureBuilder) => S.list()
 	.title('Content')
 	.items([
 		...S.documentTypeListItems().filter(
-			listItem => !['homePage', 'media.tag'].includes(listItem.getId() ?? '')
+			listItem => !['media.tag'].includes(listItem.getId() ?? '')
 		)
 	])
