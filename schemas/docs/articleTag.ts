@@ -6,8 +6,8 @@ export default defineType({
 	type: 'document',
 	fields: [
 		defineField({
-			name: 'title',
-			title: 'Title',
+			name: 'value',
+			title: 'Tag Name',
 			type: 'string',
 		}),
 		defineField({
@@ -18,7 +18,7 @@ export default defineType({
 	],
 	preview: {
 		select: {
-			title: 'title'
+			title: 'value'
 		},
 		prepare(selection) {
 			return {
