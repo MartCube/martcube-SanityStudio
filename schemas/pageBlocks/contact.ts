@@ -7,13 +7,14 @@ export default defineType({
 	fields: [
 		defineField({
 			name: 'contactMsg',
-			title: 'contact Message',
+			title: 'Contact Message',
 			type: 'array',
 			of: [
 				{
 					type: 'block',
 					styles: [
-						{title: 'Normal', value: 'normal'},
+						{ title: 'H2', value: 'h2' },
+						{ title: 'Normal', value: 'normal' },
 					],
 					lists: [],
 					marks:{
@@ -24,32 +25,59 @@ export default defineType({
 			]
 		}),
 		defineField({
-			name: 'email',
-			title: 'Email Field',
-			type: 'string',
-			validation: Rule => Rule.required(),
-			initialValue: "email",
+			name: 'responseMsg',
+			title: 'Response Message',
+			type: 'array',
+			of: [
+				{
+					type: 'block',
+					styles: [
+						{ title: 'H2', value: 'h2' },
+						{ title: 'Normal', value: 'normal' },
+						
+					],
+					lists: [],
+					marks:{
+						decorators: [],
+						annotations: [],
+					}
+				},
+			]
 		}),
 		defineField({
-			name: 'subject',
-			title: 'Subject Field',
-			type: 'string',
-			validation: Rule => Rule.required(),
-			initialValue: "subject",
-		}),
-		defineField({
-			name: 'message',
-			title: 'Message Field',
-			type: 'string',
-			validation: Rule => Rule.required(),
-			initialValue: "message",
-		}),
-		defineField({
-			name: 'submitBtn',
-			title: 'Submit Button',
-			type: 'string',
-			validation: Rule => Rule.required(),
-			initialValue: "Submit",
+			name: 'contactForm',
+			title: 'Contact Form',
+			type: 'object',
+			fields:[
+				defineField({
+					name: 'email',
+					title: 'Email Field',
+					type: 'string',
+					validation: Rule => Rule.required(),
+					initialValue: "email",
+				}),
+				defineField({
+					name: 'subject',
+					title: 'Subject Field',
+					type: 'string',
+					validation: Rule => Rule.required(),
+					initialValue: "subject",
+				}),
+				defineField({
+					name: 'message',
+					title: 'Message Field',
+					type: 'string',
+					validation: Rule => Rule.required(),
+					initialValue: "message",
+				}),
+				defineField({
+					name: 'submitBtn',
+					title: 'Submit Button',
+					type: 'string',
+					validation: Rule => Rule.required(),
+					initialValue: "Submit",
+				}),
+			]
 		}),
 	],
 	preview: {
