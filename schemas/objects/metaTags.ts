@@ -1,7 +1,7 @@
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-	name: 'metatags',
+	name: 'metaTags',
 	title: 'Meta Tags',
 	type: 'object',
 	fields: [

@@ -40,14 +40,16 @@ export default defineType({
 		}),
 		defineField({
 			name: 'metaTags',
-			type: 'metatags',
+			type: 'metaTags',
 			group: 'seo',
 		}),
 		defineField({
-			name: 'sitemap',
-			title: "Sitemap",
-			type: 'sitemap',
+			name: 'sitePriority',
+			title: 'Sitemap Priority',
+			type: 'number',
 			group: 'seo',
-		})
+			initialValue: 1,
+			validation: Rule => Rule.precision(1).min(0).max(1).required(),
+		}),
 	],
 })

@@ -17,7 +17,6 @@ import page from './docs/page'
 import project from './docs/project'
 // objects
 import metaTags from './objects/metaTags'
-import sitemap from './objects/sitemap'
 
 export const schemaTypes = [
 	articleContent,
@@ -25,7 +24,6 @@ export const schemaTypes = [
 	gallery,
 	youtube,
 	metaTags,
-	sitemap,
 	contact,
 	about,
 	article,

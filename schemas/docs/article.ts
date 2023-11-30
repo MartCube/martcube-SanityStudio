@@ -66,14 +66,16 @@ export default defineType({
 		}),
 		defineField({
 			name: 'metaTags',
-			type: 'metatags',
-			group: 'seo'
+			type: 'metaTags',
+			group: 'seo',
 		}),
 		defineField({
-			name: 'sitemap',
-			title: "Sitemap",
-			type: 'sitemap',
+			name: 'sitePriority',
+			title: 'Sitemap Priority',
+			type: 'number',
 			group: 'seo',
+			initialValue: 0.9,
+			validation: Rule => Rule.precision(1).min(0).max(1).required(),
 		}),
 	],
 })
